@@ -16,18 +16,21 @@ public class PortalGun : MonoBehaviour {
 		portalSound = GetComponents<AudioSource>()[0];
 		errorSound = GetComponents<AudioSource>()[1];
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 
 		// fire the right portal (left or right) based on input
-		if (Input.GetButtonDown("Fire1")) {
+		if (Input.GetButtonDown("Fire1"))
+		{
 			FirePortal("orange");
-		} else if (Input.GetButtonDown("Fire2")) {
+		}
+		else if (Input.GetButtonDown("Fire2"))
+		{
 			FirePortal("blue");
 		}
 	}
-
 	void FirePortal(string type) {
 
 		// struct object that will hold our raycast information
